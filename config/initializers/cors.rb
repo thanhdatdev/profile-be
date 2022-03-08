@@ -8,11 +8,11 @@ Rails.application.config.action_controller.forgery_protection_origin_check = fal
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "*"
+    origins '172.20.10.2:8080', 'localhost:8080', 'localhost:3000', 'localhost:3005', 'localhost:4000', 'thanhdatdev.github.io/profile-fe', 'thanhdatdev-profile-be.herokuapp.com', '*.ngrok.io'
 
     resource "*",
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
-      # credentials: true
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
   end
 end

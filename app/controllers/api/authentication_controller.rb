@@ -2,10 +2,7 @@ module Api
   class AuthenticationController < ApplicationController
     skip_before_action :authenticate_request
 
-    include ActionController::Cookies
-    include ActionController::RequestForgeryProtection
 
-    protect_from_forgery with: :exception
 
     def authenticate
       command = AuthenticateUser.call(params[:email], params[:password])
