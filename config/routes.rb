@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :about_mes
+  namespace :api do
+    resources :about_mes
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
