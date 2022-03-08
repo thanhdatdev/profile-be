@@ -1,6 +1,6 @@
-class CreateAboutMes < ActiveRecord::Migration[7.0]
+class CreateAbouts < ActiveRecord::Migration[7.0]
   def change
-    create_table :about_mes do |t|
+    create_table :abouts do |t|
       t.integer :dob
       t.string :from
       t.string :career
