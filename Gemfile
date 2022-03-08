@@ -52,3 +52,4 @@ end
 
 gem 'jwt'
 gem 'devise'
+gem 'simple_command'

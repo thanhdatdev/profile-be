@@ -7,4 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 about = About.create!(dob: 22, from: "Vietnam", career: "Software Developer", current_job: "Full-time at Zenapp", funny: "Cats = Dogs")
-account = User.create!(email: 'admin@example.com', password: '123123123')
+account = User.create!(name: "Thanh Dat Nguyen", email: 'admin@example.com', password: '123123123')
