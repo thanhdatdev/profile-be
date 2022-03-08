@@ -1,5 +1,7 @@
 module Api
   class AboutMesController < ApiController
+    before_action :authentication
+
     def index
       @about = AboutMe.all
       render json: @about

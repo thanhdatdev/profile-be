@@ -1,5 +1,5 @@
 class ApiController < ApplicationController
-  SECRET = "yoursecretword"
+  SECRET = ENV['SECRET']
 
   def authentication
     # making a request to a secure route, token must be included in the headers
