@@ -1,6 +1,7 @@
 module Api
   module V1
-    class AboutsController < ApplicationController
+    class AboutsController < BaseApiController
+
       def index
         @about = About.all
         render json: @about
