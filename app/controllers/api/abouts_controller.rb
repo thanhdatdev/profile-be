@@ -1,19 +1,17 @@
 module Api
-  class AboutMesController < ApiController
-    before_action :authentication
-
+  class AboutsController < ApplicationController
     def index
-      @about = AboutMe.all
+      @about = About.all
       render json: @about
     end
 
     def show
-      @about = AboutMe.find(params[:id])
+      @about = About.find(params[:id])
       render json: @about
     end
 
     def create
-      @about = AboutMe.create(
+      @about = About.create(
         dob: params[:dob],
         from: params[:from],
         career: params[:career],
@@ -24,7 +22,7 @@ module Api
     end
 
     def update
-      @about = AboutMe.find(params[:id])
+      @about = About.find(params[:id])
       @about.update(
         dob: params[:dob],
         from: params[:from],
@@ -36,8 +34,8 @@ module Api
     end
 
     def destroy
-      @about = AboutMe.all
-      @about = AboutMe.find(params[:id])
+      @about = About.all
+      @about = About.find(params[:id])
       @about.destroy
       render json: @about
     end
