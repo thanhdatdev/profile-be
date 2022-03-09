@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     end
 
     post 'authenticate', to: 'authentication#authenticate'
+    post 'get_refresh_token', to: 'authentication#get_refresh_token'
   end
 
   root to: "application#cookie"
