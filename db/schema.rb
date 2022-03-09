@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_08_031033) do
     t.string "career"
     t.string "current_job"
     t.string "funny"
+    t.string "icons", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
